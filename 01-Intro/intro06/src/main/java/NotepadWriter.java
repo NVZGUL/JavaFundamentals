@@ -1,10 +1,9 @@
-import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class NotepadWriter {
     private Notepad notepad;
 
-    public NotepadWriter(Notepad notepad){
+    NotepadWriter(Notepad notepad){
         this.notepad = notepad;
     }
     public void writeToNotepad(String note){
@@ -31,9 +30,16 @@ public class NotepadWriter {
     public void editNote(int position, String newNote){
         String[] notes = notepad.getNotes();
         if (notes.length != 0 && position < notes.length) {
-            notepad.setNotes(IntStream.range(0, notes.length)
-                    .mapToObj(i -> i == position ? newNote : notes[i])
-                    .toArray(String[]::new));
+            String[] arr = newNote.equals("") ?
+                    IntStream.range(0, notes.length)
+                            .mapToObj(i -> i == position ? newNote : notes[i])
+                            .filter(n -> !n.equals(""))
+                            .toArray(String[]::new) :
+                    IntStream.range(0, notes.length)
+                            .mapToObj(i -> i == position ? newNote : notes[i])
+                            .toArray(String[]::new);
+            notepad.setNotes(arr);
         }
     }
+
 }
