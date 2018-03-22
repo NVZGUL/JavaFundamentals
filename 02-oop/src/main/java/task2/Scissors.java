@@ -7,7 +7,7 @@ import lombok.experimental.FieldDefaults;
 
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Scissors implements Stationery {
+public class Scissors implements Priceable {
     @Getter String material;
     @Getter double size;
     double price;

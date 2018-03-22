@@ -1,5 +1,5 @@
 package task2;
 
-public interface Stationery {
+public interface Priceable {
     double price();
 }

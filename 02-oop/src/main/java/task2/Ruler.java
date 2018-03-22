@@ -6,7 +6,7 @@ import lombok.experimental.FieldDefaults;
 
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Ruler implements Stationery {
+public class Ruler implements Priceable {
     double price;
     double size;
 

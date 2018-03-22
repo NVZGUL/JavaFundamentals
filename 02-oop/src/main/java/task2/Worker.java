@@ -11,9 +11,9 @@ import java.util.List;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Worker {
-    List<Stationery> workSpaceItems;
+    List<Priceable> workSpaceItems;
 
     double totalPriceOfStationary() {
-        return workSpaceItems.stream().mapToDouble(Stationery::price).sum();
+        return workSpaceItems.stream().mapToDouble(Priceable::price).sum();
     }
 }

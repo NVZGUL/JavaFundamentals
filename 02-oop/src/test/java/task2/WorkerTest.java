@@ -1,10 +1,7 @@
 package task2;
 
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,7 +12,7 @@ class WorkerTest {
 
     @Test
     void totalPriceOfStationary() {
-        List<Stationery> workerItems = Arrays.asList(
+        List<Priceable> workerItems = Arrays.asList(
                 new Scissors("metal", 28, 5),
                 new Ruler(2, 32));
         Worker w1 = new Worker(workerItems);
