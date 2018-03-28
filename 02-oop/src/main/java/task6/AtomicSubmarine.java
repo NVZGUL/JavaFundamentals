@@ -1,5 +1,8 @@
 package task6;
 
+import task7.MyAnnotation;
+
+@MyAnnotation(author="Slava Povazhnuk", date="3/28/2018")
 public class AtomicSubmarine {
     public void startSwimming() {
         Engine e = new Engine();
