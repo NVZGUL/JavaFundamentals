@@ -21,7 +21,8 @@ public class Student {
         return mark;
     }
 
-    public <T extends Number> void setMark(T mark) {
+    public <T extends Number> boolean setMark(T mark) {
         this.mark = mark;
+        return true;
     }
 }
