@@ -16,41 +16,31 @@ public class Group {
         this.discipline = discipline;
     }
     public boolean addStudent(Student s){
-        students.add(s);
-        return true;
-    };
+        return students.add(s);
+    }
 
     public int getStudentId(Student s){
-        int i ;
-        for (Student student : students) {
-            i = 0;
-            if (student.equals(s)) {
-                return i;
-            }
-            i++;
-        }
-        return -1;
+        return students.indexOf(s);
+    }
+
+    public Student findStudent(String name) {
+        return students.stream()
+                .filter(el -> el.getName().equals(name))
+                .findFirst()
+                .orElse(null);
     }
 
     public boolean setMark(int id, String mark) {
         Student s = students.get(id);
         switch (discipline){
             case ENGLISH:
-                s.setMark(Long.valueOf(mark));
-                return true;
+                return s.setMark(Long.valueOf(mark));
             case MATH:
-                s.setMark(Integer.valueOf(mark));
-                return true;
+                return s.setMark(Integer.valueOf(mark));
             case PHISIC:
-                s.setMark(Double.valueOf(mark));
-                return true;
+                return s.setMark(Double.valueOf(mark));
                 default:
                     return false;
         }
     }
-    /*
-    public Number getMarks(){
-        discipline.getType()0;
-    }
-    */
 }
