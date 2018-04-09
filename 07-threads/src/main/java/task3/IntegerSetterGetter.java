@@ -60,7 +60,7 @@ public class IntegerSetterGetter extends Thread{
         synchronized (resource) {
             resource.setElement(number);
             System.out.println("Поток" + getName() + " записал число " + number);
-            resource.notifyAll();
+            resource.notifyAll(); // replaced notify to notify all for better choise of threads
         }
     }
 }
