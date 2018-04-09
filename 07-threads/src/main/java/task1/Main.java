@@ -9,6 +9,11 @@ import java.util.Scanner;
 
 public class Main {
 
+    /**
+     * Method for generating threads
+     * @param count > 0 - number of thread
+     * @return List of threads with size count
+     */
     private static List<TransferHandler> setThreads(int count) {
         List<TransferHandler> lst = new ArrayList<>();
         for (int i = 0; i < count; i++) {
