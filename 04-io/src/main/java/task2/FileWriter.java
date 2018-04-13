@@ -5,12 +5,8 @@ import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import task1.JavaKeywords;
 
-import java.io.File;
 import java.io.FileOutputStream;
-import java.util.Arrays;
 import java.util.Map;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class FileWriter {
