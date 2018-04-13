@@ -26,12 +26,6 @@ class FilmCollectionTest {
     @Test
     @SneakyThrows
     void saveCollection() {
-        Actor a1 = new Actor("Brad Pit", 55);
-        Actor a2 = new Actor("Anjelina Djouli", 52);
-        Film f1 = new Film("Mister and Misis Smith", Arrays.asList(a1,a2));
-        Film f2 = new Film("Fight club", Arrays.asList(a1));
-        Film f3 = new Film("Lara Croft", Arrays.asList(a2));
-
         FilmCollection filmCollection = new FilmCollection("save.txt", films);
         filmCollection.saveFilms();
     }
